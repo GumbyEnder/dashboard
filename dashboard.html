@@ -190,6 +190,78 @@
             border-radius: 8px;
         }
 
+
+        /* Portfolio Section */
+        .portfolio-section {
+            margin-top: 40px;
+            border-top: 2px solid #ecf0f1;
+            padding-top: 30px;
+        }
+        .portfolio-header h2 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+        }
+        .portfolio-updated {
+            font-size: 0.8em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        .portfolio-banner {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .banner-item {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .banner-label { font-size: 0.85em; opacity: 0.8; margin-bottom: 5px; }
+        .banner-value { font-size: 1.5em; font-weight: bold; }
+        .account-block { margin-bottom: 30px; }
+        .account-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #f8f9fa;
+            padding: 12px 15px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid #dee2e6;
+            flex-wrap: wrap;
+        }
+        .account-name { font-weight: 700; font-size: 1.05em; color: #2c3e50; }
+        .account-total { font-size: 1.2em; font-weight: bold; color: #2c3e50; margin-left: auto; }
+        .account-today, .account-gl { font-size: 0.9em; font-weight: 600; }
+        .holdings-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88em;
+            border: 1px solid #dee2e6;
+            border-top: none;
+        }
+        .holdings-table th {
+            background: #ecf0f1;
+            padding: 8px 12px;
+            text-align: right;
+            font-weight: 600;
+            color: #5d6d7e;
+            font-size: 0.85em;
+        }
+        .holdings-table th:first-child { text-align: left; }
+        .holdings-table td {
+            padding: 8px 12px;
+            border-bottom: 1px solid #f0f0f0;
+            text-align: right;
+        }
+        .holdings-table tbody tr:hover { background: #fafafa; }
+        .symbol-cell { text-align: left; font-weight: 700; color: #2c3e50; }
+        .gain { color: #27ae60; }
+        .loss { color: #e74c3c; }
+        .flat { color: #7f8c8d; }
+
         .auto-refresh {
             position: fixed;
             top: 20px;
@@ -319,7 +391,274 @@
             </div>
             
             <!-- Footer -->
-            <div class="refresh-note">
+            
+    <!-- PORTFOLIO SECTION - auto-updated February 19, 2026 — 05:51 PM EST -->
+    <div class="portfolio-section">
+        <div class="portfolio-header">
+            <h2>📈 Portfolio Overview</h2>
+            <div class="portfolio-updated">Live prices via Yahoo Finance · Updated: February 19, 2026 — 05:51 PM EST</div>
+        </div>
+
+        <!-- Grand Total Banner -->
+        <div class="portfolio-banner">
+            <div class="banner-item">
+                <div class="banner-label">Total Portfolio</div>
+                <div class="banner-value">$218.31</div>
+            </div>
+            <div class="banner-item">
+                <div class="banner-label">Today's P&L</div>
+                <div class="banner-value flat">+$0.00</div>
+            </div>
+            <div class="banner-item">
+                <div class="banner-label">Total Gain/Loss</div>
+                <div class="banner-value loss">-$68,872.12 (-99.68%)</div>
+            </div>
+        </div>
+
+        <div class="account-block">
+            <div class="account-header">
+                <span class="account-name">ROTH IRA for Minor</span>
+                <span class="account-total">$77.87</span>
+                <span class="account-today flat">+$0.00 today</span>
+                <span class="account-gl loss">-$11,524.64 total (-99.33%)</span>
+            </div>
+            <table class="holdings-table">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Shares</th>
+                        <th>Price</th>
+                        <th>Today</th>
+                        <th>Value</th>
+                        <th>Cost</th>
+                        <th>Total G/L</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td class="symbol-cell">SKYX</td>
+                        <td>3,593.703</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$8,906.85</td>
+                        <td class="loss">-$8,906.85 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">INOD</td>
+                        <td>20</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$1,122.96</td>
+                        <td class="loss">-$1,122.96 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">INTC</td>
+                        <td>16.990</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$349.98</td>
+                        <td class="loss">-$349.98 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">QUBT</td>
+                        <td>50</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$539.75</td>
+                        <td class="loss">-$539.75 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">SNAP</td>
+                        <td>47.986</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$545.38</td>
+                        <td class="loss">-$545.38 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">CRDV</td>
+                        <td>400</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$59.72</td>
+                        <td class="loss">-$59.72 (-100.00%)</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="account-block">
+            <div class="account-header">
+                <span class="account-name">Traditional IRA</span>
+                <span class="account-total">$140.44</span>
+                <span class="account-today flat">+$0.00 today</span>
+                <span class="account-gl loss">-$57,347.48 total (-99.76%)</span>
+            </div>
+            <table class="holdings-table">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Shares</th>
+                        <th>Price</th>
+                        <th>Today</th>
+                        <th>Value</th>
+                        <th>Cost</th>
+                        <th>Total G/L</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td class="symbol-cell">SKYX</td>
+                        <td>9,138.931</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$11,488.64</td>
+                        <td class="loss">-$11,488.64 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">INTC</td>
+                        <td>172.611</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$3,716.99</td>
+                        <td class="loss">-$3,716.99 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">INOD</td>
+                        <td>108.610</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$5,761.50</td>
+                        <td class="loss">-$5,761.50 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">IRE</td>
+                        <td>984.062</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$6,768.77</td>
+                        <td class="loss">-$6,768.77 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">QUBT</td>
+                        <td>250</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$2,706.13</td>
+                        <td class="loss">-$2,706.13 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">IONQ</td>
+                        <td>50</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$2,366.50</td>
+                        <td class="loss">-$2,366.50 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">SKKRF</td>
+                        <td>15,061</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$1,807.60</td>
+                        <td class="loss">-$1,807.60 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">EEENF</td>
+                        <td>101,120</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$2,143.60</td>
+                        <td class="loss">-$2,143.60 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">MAPPF</td>
+                        <td>12,898</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$1,631.84</td>
+                        <td class="loss">-$1,631.84 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">CRDV</td>
+                        <td>1,800,000</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$3,090.00</td>
+                        <td class="loss">-$3,090.00 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">CATV</td>
+                        <td>2,180,699</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$13,448.64</td>
+                        <td class="loss">-$13,448.64 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">SEAC</td>
+                        <td>25</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$752.50</td>
+                        <td class="loss">-$752.50 (-100.00%)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="symbol-cell">FBGRX</td>
+                        <td>6.234</td>
+                        <td>$0.0000 <small class="flat">(+0.00%)</small></td>
+                        <td class="flat">+$0.00</td>
+                        <td>$0.00</td>
+                        <td>$1,664.77</td>
+                        <td class="loss">-$1,664.77 (-100.00%)</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <!-- END PORTFOLIO SECTION -->
+
+        <div class="refresh-note">
                 💡 This dashboard auto-refreshes every 30 seconds and is maintained by Sam. 
                 Talk to me to modify project status and tasks.
                 <br><br>
