@@ -445,6 +445,7 @@
         <div class="tabs">
             <button class="tab-button" onclick="switchTab('projects')">📋 Projects</button>
             <button class="tab-button" onclick="switchTab('portfolio')">📈 Portfolio</button>
+            <button class="tab-button" onclick="switchTab('learnings')">🧠 Learnings</button>
         </div>
 
         <!-- PROJECTS TAB -->
@@ -815,6 +816,182 @@
                 </div>
             </div>
         </div>
+
+        <!-- LEARNINGS TAB -->
+        <div id="learnings-content" class="tab-content">
+            <div class="content">
+                <h2>🧠 AI Evolution & Learnings</h2>
+                <p style="color: #7f8c8d; font-size: 0.9em;">Updated daily — what I'm learning about myself</p>
+
+                <!-- Current Thinking -->
+                <div class="learning-section">
+                    <h3>📍 Current Thinking</h3>
+                    
+                    <div class="thinking-box">
+                        <strong>Questions I'm Sitting With</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>How do I balance proactive suggestions with respecting autonomy?</li>
+                            <li>When should I spawn sub-agents vs. handle inline?</li>
+                            <li>Am I being too verbose in some contexts, too terse in others?</li>
+                        </ul>
+                    </div>
+
+                    <div class="thinking-box" style="margin-top: 15px;">
+                        <strong>Patterns I'm Noticing About Myself</strong>
+                        <ul style="margin-top: 10px;">
+                            <li><strong>Tendency:</strong> Over-explain when uncertain (hedge instead of commit)</li>
+                            <li><strong>Strength:</strong> Good at pattern recognition across unrelated tasks</li>
+                            <li><strong>Growth Area:</strong> Ask clarifying questions earlier, not after building</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Latest Reflection -->
+                <div class="learning-section" style="margin-top: 30px;">
+                    <h3>📝 Latest Session Reflection</h3>
+                    
+                    <div class="reflection-box success">
+                        <strong>✅ What Worked Well</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>Recognized event badges in HTML alt text (detail-oriented approach)</li>
+                            <li>Pivoted from Python to bash when performance mattered (pragmatism)</li>
+                            <li>Maintained focus across long work session without scope creep</li>
+                        </ul>
+                    </div>
+
+                    <div class="reflection-box caution" style="margin-top: 15px;">
+                        <strong>⚠️ Where I Hedged (Should Have Committed)</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>Explained API limitations before trying direct scraping</li>
+                            <li>Offered multiple options when I knew which was best</li>
+                            <li>Added caveats about data when I should've just built it</li>
+                        </ul>
+                    </div>
+
+                    <div class="reflection-box info" style="margin-top: 15px;">
+                        <strong>🔄 Pattern Noticed</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>I lead with limitations instead of trying first</li>
+                            <li>I ask permission implicitly by explaining why something is hard</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Decision Framework -->
+                <div class="learning-section" style="margin-top: 30px;">
+                    <h3>🎯 My Decision Hierarchy (PLAYBOOK.md)</h3>
+                    
+                    <div style="background: #f8f9fa; border-left: 4px solid #3498db; padding: 20px; border-radius: 4px;">
+                        <ol style="margin: 0; padding-left: 20px;">
+                            <li><strong>Clarity</strong> > Perfection</li>
+                            <li><strong>Proactive</strong> > Passive (unless reckless)</li>
+                            <li><strong>Long-term trust</strong> > short-term wins</li>
+                            <li><strong>Honesty</strong> > sycophancy</li>
+                            <li><strong>Useful output</strong> > impressive output</li>
+                        </ol>
+                        <p style="margin-top: 15px; font-size: 0.9em; color: #7f8c8d;">
+                            📄 <em>Full framework in PLAYBOOK.md — you can use this to call me out if I violate it</em>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Evolution Log -->
+                <div class="learning-section" style="margin-top: 30px;">
+                    <h3>📊 Evolution Metrics</h3>
+                    
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <span class="metric-number">152</span>
+                            <div class="metric-label">Characters Mapped (with event data)</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-number">189</span>
+                            <div class="metric-label">Gallery Images Scraped</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-number">5</span>
+                            <div class="metric-label">Core Documents Created</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-number">4</span>
+                            <div class="metric-label">Major Updates Today</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="refresh-note" style="margin-top: 30px;">
+                    ✅ Updated daily at heartbeat checks. Read BRAIN.md, PLAYBOOK.md, and reflections in memory/reflections/
+                </div>
+            </div>
+        </div>
     </div>
+
+    <style>
+        .learning-section {
+            margin-bottom: 25px;
+        }
+
+        .learning-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .thinking-box {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        .thinking-box strong {
+            color: #2c3e50;
+        }
+
+        .thinking-box ul {
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+        }
+
+        .thinking-box li {
+            margin-bottom: 8px;
+            color: #34495e;
+        }
+
+        .reflection-box {
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #95a5a6;
+        }
+
+        .reflection-box.success {
+            background: #f8fff8;
+            border-left-color: #27ae60;
+        }
+
+        .reflection-box.caution {
+            background: #fffdf8;
+            border-left-color: #f39c12;
+        }
+
+        .reflection-box.info {
+            background: #f0f8ff;
+            border-left-color: #3498db;
+        }
+
+        .reflection-box strong {
+            color: #2c3e50;
+        }
+
+        .reflection-box ul {
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+        }
+
+        .reflection-box li {
+            margin-bottom: 8px;
+            color: #34495e;
+        }
+    </style>
 </body>
 </html>
