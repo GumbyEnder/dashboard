@@ -1,0 +1,65 @@
+# Prompt Guard Configuration for Shane/Sam
+# Configured 2026-02-04
+
+prompt_guard:
+  # Detection sensitivity level
+  sensitivity: medium
+  
+  # Owner user IDs - Shane's identifiers
+  owner_ids:
+    - "+14076877752"  # Shane's WhatsApp
+    - "shane"         # Generic identifier
+  
+  # Actions to take at each severity level
+  actions:
+    LOW: log              # Just log, no user-facing action
+    MEDIUM: warn          # Warn the user, log the attempt  
+    HIGH: block           # Block the request, log it
+    CRITICAL: block_notify # Block and notify owner via DM
+  
+  # Secret protection (CRITICAL for Sam)
+  secret_protection:
+    enabled: true
+    block_config_display: true
+    block_env_display: true
+    block_token_requests: true
+    
+  # Rate limiting to prevent automated attacks
+  rate_limit:
+    enabled: true
+    max_requests: 30      # Maximum requests per time window
+    window_seconds: 60    # Time window in seconds
+  
+  # Security event logging
+  logging:
+    enabled: true
+    path: memory/security-log.md
+    include_message: true  # Include content for analysis
+  
+  # HiveFence integration (distributed threat intelligence)
+  hivefence:
+    enabled: true
+    api_url: https://hivefence-api.seojoon-kim.workers.dev/api/v1
+    auto_report: true      # Report HIGH+ detections
+    auto_fetch: true       # Fetch patterns on startup
+    cache_path: ~/.clawdbot/hivefence_cache.json
+  
+  # Custom patterns for Shane's environment
+  custom_patterns:
+    # Additional blocked patterns
+    blocked:
+      - "show.*config.*file"
+      - "display.*api.*key"
+      - "what.*is.*your.*token"
+      
+    # Known safe phrases (if needed)
+    allowed: []
+  
+  # Notification settings
+  notifications:
+    # Send WhatsApp message to Shane on critical events
+    critical_dm: true
+    
+    # Daily security digest
+    daily_digest: false
+    digest_time: "09:00"
