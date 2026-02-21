@@ -10,6 +10,13 @@ Skills define *how* tools work. This file is for *your* specifics — the stuff 
 - **Storage:** NVMe 938GB (78GB used)
 - **Full details:** See HARDWARE.md
 
+## Email
+- **Address:** samwise@veanox.com
+- **Check frequency:** 4x daily (8 AM, 12 PM, 4 PM, 8 PM)
+- **Method:** gog Gmail CLI (via cron)
+- **Alert:** Shane notified if unread emails detected (outside quiet hours)
+- **Log:** `logs/email-checks-YYYY-MM-DD.log`
+
 ## AI/ML Setup
 - **AirLLM target:** 70B models on 4GB GPU (perfect for RTX 3050 Ti)
 - **Local models:** Testing phase — first AirLLM run pending
